@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "noexplosiondamagetomobs",
+	"version": "${version}",
+	"name": "noExplosionDamagetoMobs",
+	"description": "NoExplosionDamagetoMobs",
+	"authors": [
+		"talkingpanda"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/noexplosiondamagetomobs/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"talkingpanda.NoExplosionDamagetoMobs"
+		]
+	},
+	"mixins": [
+		"noexplosiondamagetomobs.mixins.json",
+		{
+			"config": "noexplosiondamagetomobs.client.mixins.json",
+			"environment": "server"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.23",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

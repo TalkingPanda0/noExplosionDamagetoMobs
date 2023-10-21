@@ -9,6 +9,10 @@ import net.minecraft.entity.decoration.AbstractDecorationEntity;
 
 @Mixin(AbstractDecorationEntity.class)
 public class DecorEntity {
+    /**
+     * @author TalkingPnada
+     * @reason to stop entity from dying from non players
+     */
     @Overwrite()
     public boolean damage(DamageSource source, float amount)
     {
